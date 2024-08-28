@@ -1,0 +1,46 @@
+.hero
+  width: -webkit-fill-available
+  margin-top: 40px
+  max-width: 1100px
+  @include mobile
+    padding: 0
+    width: 100%
+
+
+  &__container
+    display: flex
+    align-items: center
+    justify-content: center
+    gap: 20px
+    background-color: #fff
+    border-radius: 40px
+    box-shadow: rgba(#000, 0.25) 0 4px 4px 0
+    padding: 8px 16px
+    @include mobile
+      border-radius: initial
+
+  &__icon
+    width: 55px
+    @include mobile
+      width: 45px
+
+  &__content
+    display: flex
+    flex-direction: column
+    gap: 4px
+    text-transform: uppercase
+    text-align: center
+
+    h2
+      @include fontSize(22, 32)
+      color: #15014D
+      font-weight: 700
+    p
+      @include fontSize(16, 20)
+      font-weight: 700
+      span.blue
+        color: #4200FF
+      span.red
+        color: #D80505
+      span.green
+        color: #154A02

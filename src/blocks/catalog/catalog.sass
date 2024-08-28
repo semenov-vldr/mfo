@@ -1,0 +1,104 @@
+.catalog
+
+  &__container
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    gap: 32px
+    justify-content: center
+    @include tablet
+      grid-template-columns: repeat(3, 1fr)
+      gap: 24px
+    @include mobile
+      grid-template-columns: repeat(2, 1fr)
+      gap: 16px
+    @media (max-width: 400px)
+      grid-template-columns: 1fr
+
+
+
+  .card
+    background-color: #fff
+    border-radius: 40px
+    box-shadow: rgba(#000, 0.25) 4px 5px 5px 1px
+    padding: 20px
+    display: flex
+    flex-direction: column
+    gap: 10px
+    text-align: center
+    @include mobile
+      padding: 12px 12px 20px
+    @media (max-width: 400px)
+      margin: 0 auto
+
+    &__logo
+      height: 45px
+      max-width: 150px
+      width: auto
+      object-fit: contain
+      margin: 0 auto
+      @include mobile
+        height: 35px
+        max-width: 115px
+
+
+    &__advantages-list
+      display: flex
+      flex-direction: column
+      gap: 4px
+
+
+    &__advantages-item
+      position: relative
+      display: flex
+      align-items: center
+      gap: 8px
+      font-weight: 600
+      text-transform: uppercase
+      font-size: 12px
+      text-wrap: balance
+      text-align: left
+      &::before
+        content: ""
+        display: inline-block
+        width: 30px
+        height: 30px
+        background-position: center
+        background-size: contain
+        background-repeat: no-repeat
+        @include mobile
+          width: 23px
+          height: 23px
+      &:nth-child(1)::before
+        background-image: url("../img/icons/Accumulate.png")
+      &:nth-child(2)::before
+        background-image: url("../img/icons/MIR.png")
+      &:nth-child(3)::before
+        background-image: url("../img/icons/Color-Switch.png")
+      @include mobile
+        font-size: 10px
+
+    &__payment
+      text-transform: uppercase
+      color: #003CAF
+      font-weight: 700
+      font-size: 12px
+      text-wrap: balance
+
+    &__button
+      background-color: #3680FA
+      color: #fff
+      font-size: 12px
+      border-radius: 40px
+      padding: 12px
+      width: 100%
+      display: flex
+      align-items: center
+      justify-content: center
+      min-height: 38px
+      transition: $transition
+      margin-top: auto
+      &:hover
+        background-color: #2673f6
+      @include mobile
+        padding: 8px
+        font-size: 10px
