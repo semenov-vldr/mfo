@@ -1,0 +1,35 @@
+.footer
+  min-height: 320px
+  background-image: url("../img/footer-bg.svg")
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: bottom
+  display: flex
+  align-items: center
+  @include tablet
+    min-height: 200px
+  @include mobile
+    min-height: 90px
+
+  &__container
+    display: flex
+    justify-content: space-between
+    gap: 64px
+    align-items: center
+    width: 100%
+    @include mobile
+      padding-top: 20px
+
+  span
+    font-size: 20px
+    font-weight: 600
+    text-transform: uppercase
+    color: #fff
+    text-wrap: balance
+    @include mobile
+      font-size: 10px
+    @media (max-width: 400px)
+      font-size: 8px
+
+  a:hover
+    text-decoration: underline
